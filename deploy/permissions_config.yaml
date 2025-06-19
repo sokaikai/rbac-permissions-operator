@@ -1,0 +1,15 @@
+apiVersion: managed.openshift.io/v1alpha1
+kind: SubjectPermission
+metadata:
+  name: demousers-permissions
+  namespace: rbac-permissions-operator
+spec:
+  subjectKind: Group
+  subjectName: demousers
+  clusterPermissions:
+    - cluster-monitoring-view
+    - cluster-info-reader
+  permissions:
+    - clusterRoleName: custom-demouser-role
+      namespacesAllowedRegex: .*
+      namespacesDeniedRegex: ^sng.* #change this to the right region
