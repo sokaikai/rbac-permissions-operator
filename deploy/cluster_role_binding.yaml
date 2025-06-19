@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: rbac-permissions-operator
-  namespace: openshift-rbac-permissions
+  namespace: rbac-permissions-operator
 roleRef:
   kind: ClusterRole
   name: rbac-permissions-operator-cluster-admin
